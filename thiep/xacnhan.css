@@ -289,16 +289,33 @@
 }
 
 .box-form{
+  position: relative; /* Add relative positioning to contain the ::before pseudo-element */
   height: 750px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  align-items: flex-start;
-  /* padding: 40px; */
-  background-image: url('./anh/back.PNG');
-  background-position: bottom center;
-  background-size: contain;
+  align-items: center;
+  background-image: url('./anh/background.jpg');
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
+  padding: 20px;
+  z-index: 2; /* Set the content on top of the overlay */
+}
+
+.box-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 0; /* Ensure the overlay is behind the content */
+}
+
+.box-form > * {
+  position: relative;
+  z-index: 2; /* Ensure content elements are above the overlay */
 }
 
 .img-form{
@@ -312,15 +329,17 @@
 
 .feed-info{
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   margin: 20px 0;
+  color: #fff;
 }
 
 .in-fe{
   font-size: 10px;
   font-weight: 300;
   font-family: 'SVN-Gotham';
+  color: #fff;
 }
 
 
@@ -467,6 +486,7 @@ background-color: #61673A;
   border-radius: 20px;
   font-size: 15px;
   font-weight: 500;
+  color: #fff;
 }
 .xac-nhan{
   display: flex;
@@ -496,7 +516,7 @@ background-color: #61673A;
     margin-left: 55px;
   }
   .box-form{
-    margin-top: 100px;
-    margin-left: 30px;
+    margin-top: 20px;
+    padding: 20px;
   }
 }
