@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Thông tin Open Graph cho ảnh đại diện -->
+    <meta property="og:image" content="https://yenstudio.com.vn/anh-nhi.jpg" />
+    <meta property="og:image:width" content="600" /> <!-- Chiều rộng ảnh đại diện -->
+    <meta property="og:image:height" content="300" /> <!-- Chiều cao ảnh đại diện -->
+
+    <!-- Các thông tin khác cho Open Graph -->
+    <meta property="og:title" content="ANH - NHI" />
+    <meta property="og:description" content="TUẤN ANH - UYỂN NHI" />
+    <meta property="og:url" content="https://yenstudio.com.vn/anh-nhi.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./thiep/box.css">
+    <title>Thiệp Mời</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="./thiep/jquery.fancybox.min.css" rel="stylesheet" />
+    <script src="./thiep/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        #thiepmoi {
+            display: none;
+            max-height: 99vh;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            /* Giới hạn chiều rộng của popup */
+            overflow: hidden;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-top: 177.78%;
+            /* Tỉ lệ 9:16 */
+        }
+        
+        #ytplayer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .fancybox-button svg {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-container">
+            <div class="box-top">
+                <!-- <a data-fancybox data-src="#thiepmoi" href="javascript:;" class="btn btn-primary">
+                <img src="./thiep/anh/IMG_1101.GIF" alt="" class="img-top"></a> -->
+
+                <img src="./thiep/anh/A-N-05.png" alt="" class="img-top1">
+                <div class="box-btn">
+                    <div class="row">
+                        <!-- <div class="box-row"> -->
+                            <button data-modal-target="modal2" class="btn-modal"><img src="./thiep/anh/thoigian-06.png" alt="" class="img-btn"></button>
+                            <a href="https://maps.app.goo.gl/aaBjcuUHqgMZeXfg8" target="_blank">
+                                <img src="./thiep/anh/bando-06.png" alt="" class="img-btn"></a>
+                        <!-- </div> -->
+                        <!-- <button data-modal-target="modal1" class="btn-modal"><img src="./thiep/anh/qr-04.png" alt="" class="img-btn"></button> -->
+                        <!-- <div class="box-row"> -->
+                            <a href="./xacnhan.html" target="_blank" class="centered">
+                                <img src="./thiep/anh/xacnhan-06.png" alt="" class="img-btn"></a>
+                            <!-- <a href="#" target="_blank" class="centered">
+                                <img src="./thiep/anh/album-06.png" alt="" class="img-btn1"></a> -->
+                                <button data-modal-target="modal3" class="btn-modal"><img src="./thiep/anh/album-06.png" alt="" class="img-btn"></button>
+                            <!-- </div> -->
+                    </div>
+                </div>
+                
+            </div>
+          
+            <div class="modal" id="modal1"> <!-- This is the background overlay -->
+              <div class="modal-content"> <!-- This is the actual modal/popup box -->
+                <span class="modal-close">&times;</span>
+                <h1>QR CODE</h1>
+                <img src="./thiep/anh/qr-04.png" alt="" class="img-modal">
+              </div>
+            </div>
+            <div class="modal" id="modal2">
+              <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h1>THỜI GIAN & ĐỊA ĐIỂM</h1>
+               <img src="./thiep/anh/tgdd-04.png" alt="" class="img-modal">
+              </div>
+            </div>
+            <div class="modal" id="modal3">
+                <div class="modal-content2">
+                  <span class="modal-close">&times;</span>
+                   <!-- Slider container -->
+                   <!-- <h1>ALBUM</h1> -->
+                <div class="slider">
+                    <div class="slide">
+                    <img src="./thiep/anh/1.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/2.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/3.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/4.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/5.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/6.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/7.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/8.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/9.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/10.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/12.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/13.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/15.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/16.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/17.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/18.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/19.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/20.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5010.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5434.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5437.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5439.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5441.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5444.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5446.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5447.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5448.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5449.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5451.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5457.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5459.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5460.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/IMG_5461.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/L1190041.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/L1190450.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/L1190526.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/L1190541.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/L1190560.webp" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./thiep/anh/L1190799.webp" alt="" />
+                    </div>
+                
+
+                    <button class="btn btn-next"><i class="fa-solid fa-caret-right"></i></button>
+                    <button class="btn btn-prev"><i class="fa-solid fa-caret-left"></i></button>
+                </div>
+                </div>
+              </div>
+
+            
+        </div>
+    </div>
+
+    <!-- <div style="display: none;padding:0;" id="thiepmoi">
+        <div class="video-container">
+            <iframe id="ytplayer" type="text/html" 
+                src="https://www.youtube.com/embed/BN3vmAroHzE?autoplay=1&mute=0&start=1" 
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div> -->
+    </div>
+    <script>
+
+
+        const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
+        const modals = document.querySelectorAll(".modal");
+        const modalCloseButtons = document.querySelectorAll(".modal-close");
+
+        modalTriggerButtons.forEach(elem => {
+        elem.addEventListener("click", event => toggleModal(event.currentTarget.getAttribute("data-modal-target")));
+        });
+        modalCloseButtons.forEach(elem => {
+        elem.addEventListener("click", event => toggleModal(event.currentTarget.closest(".modal").id));
+        });
+        modals.forEach(elem => {
+        elem.addEventListener("click", event => {
+            if(event.currentTarget === event.target) toggleModal(event.currentTarget.id);
+        });
+        });
+
+        // Maybe also close with "Esc"...
+        document.addEventListener("keydown", event => {
+        if(event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
+            toggleModal(document.querySelector(".modal.modal-show").id);
+        }
+        });
+
+        function toggleModal(modalId) {
+        const modal = document.getElementById(modalId);
+
+        if(getComputedStyle(modal).display==="flex") { // alternatively: if(modal.classList.contains("modal-show"))
+            modal.classList.add("modal-hide");
+            setTimeout(() => {
+            document.body.style.overflow = "initial"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown - in this case: "initial" <=> "visible"
+            modal.classList.remove("modal-show", "modal-hide");
+            modal.style.display = "none";      
+            }, 200);
+        }
+        else {
+            document.body.style.overflow = "hidden"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown
+            modal.style.display = "flex";
+            modal.classList.add("modal-show");
+        }
+        }
+    </script>
+     <script>
+        "use strict";
+        // Select all slides
+        const slides = document.querySelectorAll(".slide");
+        
+        // loop through slides and set each slides translateX
+        slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${indx * 100}%)`;
+        });
+        
+        // select next slide button
+        const nextSlide = document.querySelector(".btn-next");
+        
+        // current slide counter
+        let curSlide = 0;
+        // maximum number of slides
+        let maxSlide = slides.length - 1;
+        
+        // add event listener and navigation functionality
+        nextSlide.addEventListener("click", function () {
+        // check if current slide is the last and reset current slide
+        if (curSlide === maxSlide) {
+            curSlide = 0;
+        } else {
+            curSlide++;
+        }
+        
+        //   move slide by -100%
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        });
+        });
+        
+        // select next slide button
+        const prevSlide = document.querySelector(".btn-prev");
+        
+        // add event listener and navigation functionality
+        prevSlide.addEventListener("click", function () {
+        // check if current slide is the first and reset current slide to last
+        if (curSlide === 0) {
+            curSlide = maxSlide;
+        } else {
+            curSlide--;
+        }
+        
+        //   move slide by 100%
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        });
+        });
+ 
+     </script>
+</body>
+</html>

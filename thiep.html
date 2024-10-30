@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Thông tin Open Graph cho ảnh đại diện -->
+    <meta property="og:image" content="https://yenstudio.com.vn/anh-nhi.jpg" />
+    <meta property="og:image:width" content="600" /> <!-- Chiều rộng ảnh đại diện -->
+    <meta property="og:image:height" content="300" /> <!-- Chiều cao ảnh đại diện -->
+
+    <!-- Các thông tin khác cho Open Graph -->
+    <meta property="og:title" content="ANH - NHI" />
+    <meta property="og:description" content="TUẤN ANH - UYỂN NHI" />
+    <meta property="og:url" content="https://yenstudio.com.vn/anh-nhi.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./thiep/box.css">
+    <title>Thiệp Mời</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="./thiep/jquery.fancybox.min.css" rel="stylesheet" />
+    <script src="./thiep/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        #thiepmoi {
+            display: none;
+            max-height: 99vh;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            /* Giới hạn chiều rộng của popup */
+            overflow: hidden;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-top: 177.78%;
+            /* Tỉ lệ 9:16 */
+        }
+        
+        #ytplayer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .fancybox-button svg {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-container">
+            <div class="box-top">
+                <a href="./thiepmoi.html" class="bithu"><img src="./thiep/anh/IMG_1101.GIF" alt="" class="img-top"></a>
+            </div>              
+        </div>
+    </div>
+    <script>
+
+
+        const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
+        const modals = document.querySelectorAll(".modal");
+        const modalCloseButtons = document.querySelectorAll(".modal-close");
+
+        modalTriggerButtons.forEach(elem => {
+        elem.addEventListener("click", event => toggleModal(event.currentTarget.getAttribute("data-modal-target")));
+        });
+        modalCloseButtons.forEach(elem => {
+        elem.addEventListener("click", event => toggleModal(event.currentTarget.closest(".modal").id));
+        });
+        modals.forEach(elem => {
+        elem.addEventListener("click", event => {
+            if(event.currentTarget === event.target) toggleModal(event.currentTarget.id);
+        });
+        });
+
+        // Maybe also close with "Esc"...
+        document.addEventListener("keydown", event => {
+        if(event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
+            toggleModal(document.querySelector(".modal.modal-show").id);
+        }
+        });
+
+        function toggleModal(modalId) {
+        const modal = document.getElementById(modalId);
+
+        if(getComputedStyle(modal).display==="flex") { // alternatively: if(modal.classList.contains("modal-show"))
+            modal.classList.add("modal-hide");
+            setTimeout(() => {
+            document.body.style.overflow = "initial"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown - in this case: "initial" <=> "visible"
+            modal.classList.remove("modal-show", "modal-hide");
+            modal.style.display = "none";      
+            }, 200);
+        }
+        else {
+            document.body.style.overflow = "hidden"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown
+            modal.style.display = "flex";
+            modal.classList.add("modal-show");
+        }
+        }
+    </script>
+     <script>
+        "use strict";
+        // Select all slides
+        const slides = document.querySelectorAll(".slide");
+
+        // Loop through slides and set each slides translateX
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${indx * 100}%)`;
+        });
+
+        // Select next slide button
+        const nextSlide = document.querySelector(".btn-next");
+
+        // Current slide counter
+        let curSlide = 0;
+        // Maximum number of slides
+        const maxSlide = slides.length;
+
+        // Add event listener and navigation functionality for next slide
+        nextSlide.addEventListener("click", function () {
+            // Increment current slide and loop back to the start if at the end
+            curSlide = (curSlide + 1) % maxSlide;
+
+            // Move slide by -100%
+            slides.forEach((slide, indx) => {
+                slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+            });
+        });
+
+        // Select previous slide button
+        const prevSlide = document.querySelector(".btn-prev");
+
+        // Add event listener and navigation functionality for previous slide
+        prevSlide.addEventListener("click", function () {
+            // Decrement current slide and loop back to the end if at the start
+            curSlide = (curSlide - 1 + maxSlide) % maxSlide;
+
+            // Move slide by 100%
+            slides.forEach((slide, indx) => {
+                slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+            });
+        });
+
+     </script>
+</body>
+</html>
