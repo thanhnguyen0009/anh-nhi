@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Thông tin Open Graph cho ảnh đại diện -->
+    <meta property="og:image" content="https://yenstudio.com.vn/anh-nhi.jpg" />
+    <meta property="og:image:width" content="600" /> <!-- Chiều rộng ảnh đại diện -->
+    <meta property="og:image:height" content="300" /> <!-- Chiều cao ảnh đại diện -->
+
+    <!-- Các thông tin khác cho Open Graph -->
+    <meta property="og:title" content="ANH - NHI" />
+    <meta property="og:description" content="TUẤN ANH - UYỂN NHI" />
+    <meta property="og:url" content="https://yenstudio.com.vn/anh-nhi.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./thiep/album.css">
+    <title>Thiệp Mời</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="./thiep/jquery.fancybox.min.css" rel="stylesheet" />
+    <script src="./thiep/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="til">
+            <label for="" class="til-lb">ALBUM PHOTO</label>
+        </div> -->
+        <div class="photo-gallery">
+            <div class="column">
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/1.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/2.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/3.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/4.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/5.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/6.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/7.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/8.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/9.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/10.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5444.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5446.webp" alt="">
+                </div>
+                
+               
+            </div>
+            <div class="column">
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/13.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/15.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/16.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/17.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/18.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/19.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/20.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5010.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5434.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5437.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5437.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5441.webp" alt="">
+                </div>
+                
+            </div>
+            <div class="column">
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/12.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5448.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5449.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5451.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5457.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5459.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5460.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/IMG_5461.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/L1190041.webp" alt="">
+                </div>
+                <div class="photo" onclick="openModal(this)">
+                    <img src="./thiep/anh/L1190450.webp" alt="">
+                </div>
+            </div>
+    </div>
+    <!-- Modal để hiển thị ảnh lớn -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+</div>
+</div>
+
+<script>
+    function openModal(element) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const captionText = document.getElementById("caption");
+    
+    modal.style.display = "block";
+    modalImg.src = element.querySelector('img').src; // Lấy src của ảnh nhấn
+    captionText.innerHTML = element.querySelector('img').alt; // Lấy alt của ảnh
+}
+
+function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
